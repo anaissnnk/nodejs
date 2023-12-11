@@ -4,12 +4,22 @@ const path = require('path');
 //creating main html
 try {
   const filePath = path.join(__dirname, "index.html");
-  const h1Content = "<h1>This is a the main index file</h1>";
+  const h1Content = "<h1>This is the main index file</h1>";
+  const cssLink = '<link rel="stylesheet" href="styles.css">';
 
-  fs.writeFileSync(filePath, "<!DOCTYPE html>\n<html>\n<head>\n<title>My Page</title>\n</head>\n<body>");
-  fs.appendFileSync(filePath, h1Content);
-  fs.appendFileSync(filePath, "\n</body>\n</html>");
-
+  // Construct the full HTML content
+  const htmlContent = `<!DOCTYPE html>
+      <html>
+      <head>
+          ${cssLink}
+          <title>My Page</title>
+      </head>
+      <body>
+          ${h1Content}
+      </body>
+      </html>`;
+  // Write the entire HTML content to the file
+  fs.writeFileSync(filePath, htmlContent);
   } catch (err) {
     console.error(err.code);
     console.error(err.message);
@@ -58,12 +68,20 @@ try {
 //creating about html
 try {
     const filePath = path.join(__dirname, "about", "index.html");
-    const h1Content = "<h1>H1 about HTML</h1>";
+    const h1Content = "<h1>This is the main index file</h1>";
+    const cssLink = '<link rel="stylesheet" href="./about/style.css">';
   
-    fs.writeFileSync(filePath, "<!DOCTYPE html>\n<html>\n<head>\n<title>My Page</title>\n</head>\n<body>");
-    fs.appendFileSync(filePath, h1Content);
-    fs.appendFileSync(filePath, "\n</body>\n</html>");
-
+    const htmlContent = `<!DOCTYPE html>
+        <html>
+        <head>
+            ${cssLink}
+            <title>My Page</title>
+        </head>
+        <body>
+            ${h1Content}
+        </body>
+        </html>`;
+    fs.writeFileSync(filePath, htmlContent);
   } catch (err) {
     console.error(err.code);
     console.error(err.message);
@@ -73,11 +91,19 @@ try {
 try {
   const filePath = path.join(__dirname, "blog", "index.html");
   const h1Content = "<h1>H1 blog HTML</h1>";
+  const cssLink = '<link rel="stylesheet" href="./blog/styles.css">';
 
-  fs.writeFileSync(filePath, "<!DOCTYPE html>\n<html>\n<head>\n<title>My Page</title>\n</head>\n<body>");
-  fs.appendFileSync(filePath, h1Content);
-  fs.appendFileSync(filePath, "\n</body>\n</html>");
-
+  const htmlContent = `<!DOCTYPE html>
+      <html>
+      <head>
+          ${cssLink}
+          <title>My Page</title>
+      </head>
+      <body>
+          ${h1Content}
+      </body>
+      </html>`;
+  fs.writeFileSync(filePath, htmlContent);
   } catch (err) {
     console.error(err.code);
     console.error(err.message);
@@ -86,12 +112,20 @@ try {
 //creating contact html
 try {
   const filePath = path.join(__dirname, "contact", "index.html");
-  const h1Content = "<h1>H1 contact HTML</h1>";
+  const h1Content = "<h1>H1 blog HTML</h1>";
+  const cssLink = '<link rel="stylesheet" href="./contact/styles.css">';
 
-  fs.writeFileSync(filePath, "<!DOCTYPE html>\n<html>\n<head>\n<title>My Page</title>\n</head>\n<body>");
-  fs.appendFileSync(filePath, h1Content);
-  fs.appendFileSync(filePath, "\n</body>\n</html>");
-
+  const htmlContent = `<!DOCTYPE html>
+      <html>
+      <head>
+          ${cssLink}
+          <title>My Page</title>
+      </head>
+      <body>
+          ${h1Content}
+      </body>
+      </html>`;
+  fs.writeFileSync(filePath, htmlContent);
   } catch (err) {
     console.error(err.code);
     console.error(err.message);
