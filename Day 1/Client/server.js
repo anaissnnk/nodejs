@@ -5,8 +5,7 @@ const path = require('path');
 try {
   const filePath = path.join(__dirname, "index.html");
   const h1Content = "<h1>This is the main index file</h1>";
-  const cssLink = '<link rel="stylesheet" href="styles.css">';
-
+  const cssLink = '<link rel="stylesheet" href="style.css">';
   // Construct the full HTML content
   const htmlContent = `<!DOCTYPE html>
       <html>
@@ -28,10 +27,11 @@ try {
 //create main css
 try {
     const filePath = path.join(__dirname, "style.css");
-
-    fs.writeFileSync(filePath, "Hello World!");
-    fs.appendFileSync(filePath, " I love Node JS");
-  
+    const cssContent = `body {
+      background-color: red;
+    }
+    `;
+    fs.writeFileSync(filePath, cssContent);
   } catch (err) {
     console.error(err.code);
     console.error(err.message);
@@ -91,7 +91,7 @@ try {
 try {
   const filePath = path.join(__dirname, "blog", "index.html");
   const h1Content = "<h1>H1 blog HTML</h1>";
-  const cssLink = '<link rel="stylesheet" href="./blog/styles.css">';
+  const cssLink = '<link rel="stylesheet" href="./blog/style.css">';
 
   const htmlContent = `<!DOCTYPE html>
       <html>
@@ -113,7 +113,7 @@ try {
 try {
   const filePath = path.join(__dirname, "contact", "index.html");
   const h1Content = "<h1>H1 blog HTML</h1>";
-  const cssLink = '<link rel="stylesheet" href="./contact/styles.css">';
+  const cssLink = '<link rel="stylesheet" href="./contact/style.css">';
 
   const htmlContent = `<!DOCTYPE html>
       <html>
@@ -133,12 +133,12 @@ try {
 
 //creating about css
 try {
-    const filePath = path.join(__dirname, "about", "style.css");
-    
-
-    fs.writeFileSync(filePath, "Hello World!");
-    fs.appendFileSync(filePath, " I love Node JS");
-
+    const filePath = path.join(__dirname, "about", "style.css");    
+    const cssContent = `body {
+      background-color: blue;
+    }
+    `;
+    fs.writeFileSync(filePath, cssContent);
   } catch (err) {
     console.error(err.code);
     console.error(err.message);
@@ -147,10 +147,11 @@ try {
 //creating blog css
 try {
     const filePath = path.join(__dirname, "blog", "style.css");
-
-    fs.writeFileSync(filePath, "Hello World!");
-    fs.appendFileSync(filePath, " I love Node JS");
-
+    const cssContent = `body {
+      background-color: green;
+    }
+    `;
+    fs.writeFileSync(filePath, cssContent);
   } catch (err) {
     console.error(err.code);
     console.error(err.message);
@@ -159,10 +160,11 @@ try {
 //creating contact css
 try {
     const filePath = path.join(__dirname, "contact", "style.css");
-
-    fs.writeFileSync(filePath, "Hello World!");
-    fs.appendFileSync(filePath, " I love Node JS");
-
+    const cssContent = `body {
+      background-color: yellow;
+    }
+    `;
+    fs.writeFileSync(filePath, cssContent);
   } catch (err) {
     console.error(err.code);
     console.error(err.message);
