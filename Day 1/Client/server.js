@@ -3,10 +3,12 @@ const path = require('path');
 
 //creating main html
 try {
-    const filePath = path.join(__dirname, "index.html");
+  const filePath = path.join(__dirname, "index.html");
+  const h1Content = "<h1>This is a the main index file</h1>";
 
-    fs.writeFileSync(filePath, "Hello World!");
-    fs.appendFileSync(filePath, " I love Node JS");
+  fs.writeFileSync(filePath, "<!DOCTYPE html>\n<html>\n<head>\n<title>My Page</title>\n</head>\n<body>");
+  fs.appendFileSync(filePath, h1Content);
+  fs.appendFileSync(filePath, "\n</body>\n</html>");
 
   } catch (err) {
     console.error(err.code);
@@ -56,10 +58,11 @@ try {
 //creating about html
 try {
     const filePath = path.join(__dirname, "about", "index.html");
-    
-
-    fs.writeFileSync(filePath, "Hello World!");
-    fs.appendFileSync(filePath, " I love Node JS");
+    const h1Content = "<h1>H1 about HTML</h1>";
+  
+    fs.writeFileSync(filePath, "<!DOCTYPE html>\n<html>\n<head>\n<title>My Page</title>\n</head>\n<body>");
+    fs.appendFileSync(filePath, h1Content);
+    fs.appendFileSync(filePath, "\n</body>\n</html>");
 
   } catch (err) {
     console.error(err.code);
@@ -68,10 +71,12 @@ try {
 
 //creating blog html
 try {
-    const filePath = path.join(__dirname, "blog", "index.html");
+  const filePath = path.join(__dirname, "blog", "index.html");
+  const h1Content = "<h1>H1 blog HTML</h1>";
 
-    fs.writeFileSync(filePath, "Hello World!");
-    fs.appendFileSync(filePath, " I love Node JS");
+  fs.writeFileSync(filePath, "<!DOCTYPE html>\n<html>\n<head>\n<title>My Page</title>\n</head>\n<body>");
+  fs.appendFileSync(filePath, h1Content);
+  fs.appendFileSync(filePath, "\n</body>\n</html>");
 
   } catch (err) {
     console.error(err.code);
@@ -80,10 +85,12 @@ try {
 
 //creating contact html
 try {
-    const filePath = path.join(__dirname, "contact", "index.html");
+  const filePath = path.join(__dirname, "contact", "index.html");
+  const h1Content = "<h1>H1 contact HTML</h1>";
 
-    fs.writeFileSync(filePath, "Hello World!");
-    fs.appendFileSync(filePath, " I love Node JS");
+  fs.writeFileSync(filePath, "<!DOCTYPE html>\n<html>\n<head>\n<title>My Page</title>\n</head>\n<body>");
+  fs.appendFileSync(filePath, h1Content);
+  fs.appendFileSync(filePath, "\n</body>\n</html>");
 
   } catch (err) {
     console.error(err.code);
