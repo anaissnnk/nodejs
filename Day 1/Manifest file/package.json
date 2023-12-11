@@ -1,0 +1,11 @@
+{
+  "name": "manifest-file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"You just ran a test\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
