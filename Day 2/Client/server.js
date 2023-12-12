@@ -12,6 +12,12 @@ server.on("request", (request, response) => {
   console.log(request.url);
   if(request.url === "/") {
     console.log(path.join(__dirname, "index.html"));
+  } else if (request.url === "/about") {
+    console.log(path.join(__dirname, "about", "index.html"));
+  } else if (request.url === "/blog") {
+    console.log(path.join(__dirname, "blog", "index.html"));
+  } else if (request.url === "/contact") {
+    console.log(path.join(__dirname, "contact", "index.html"));
   }
   response.end();
 })
