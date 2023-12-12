@@ -68,7 +68,7 @@ try {
 //creating about html
 try {
     const filePath = path.join(__dirname, "about", "index.html");
-    const h1Content = "<h1>This is the main index file</h1>";
+    const h1Content = "<h1>This is the about page html file</h1>";
     const cssLink = '<link rel="stylesheet" href="./about/style.css">';
   
     const htmlContent = `<!DOCTYPE html>
@@ -90,7 +90,7 @@ try {
 //creating blog html
 try {
   const filePath = path.join(__dirname, "blog", "index.html");
-  const h1Content = "<h1>H1 blog HTML</h1>";
+  const h1Content = "<h1>This is the blog page html file</h1>";
   const cssLink = '<link rel="stylesheet" href="./blog/style.css">';
 
   const htmlContent = `<!DOCTYPE html>
@@ -112,7 +112,7 @@ try {
 //creating contact html
 try {
   const filePath = path.join(__dirname, "contact", "index.html");
-  const h1Content = "<h1>H1 blog HTML</h1>";
+  const h1Content = "<h1>This is the contact page html file</h1>";
   const cssLink = '<link rel="stylesheet" href="./contact/style.css">';
 
   const htmlContent = `<!DOCTYPE html>
@@ -169,3 +169,17 @@ try {
     console.error(err.code);
     console.error(err.message);
 }
+
+//START DAY 2
+
+//create servers
+const http = require('http') 
+const server = http.createServer()
+
+server.on("request", (request, response) => {
+//
+})
+
+server.listen(3000, () => {
+    console.log("Server started on http://127.0.0.1:3000");
+})
