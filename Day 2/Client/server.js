@@ -14,22 +14,30 @@ http.createServer(function (req, res) {
       return res.end();
     });
   } else if(req.url ==="/about") {
-    fs.readFile('about/index.html', function(err, data) {
+    const directoryName = "/about";
+    const indexPath = path.join(__dirname, directoryName, 'index.html');
+    fs.readFile(indexPath, function(err, data) {
       res.writeHead(200, {'Content-Type': 'text/html'});
       res.write(data);
       return res.end();
     });
   } else if (req.url ==="/blog") {
-    fs.readFile('blog/index.html', function(err, data) {
+    const directoryName = "/blog";
+    const indexPath = path.join(__dirname, directoryName, 'index.html');
+    fs.readFile(indexPath, function(err, data) {
       res.writeHead(200, {'Content-Type': 'text/html'});
       res.write(data);
       return res.end();
     });
   } else if (req.url ==="/contact") {
-    fs.readFile('contact/index.html', function(err, data) {
+    const directoryName = "/contact";
+    const indexPath = path.join(__dirname, directoryName, 'index.html');
+    fs.readFile(indexPath, function(err, data) {
       res.writeHead(200, {'Content-Type': 'text/html'});
       res.write(data);
       return res.end();
     });
   }
 }).listen(8080);
+
+//link: localhost:8080
