@@ -3,26 +3,44 @@
 const fs = require('fs');
 const path = require('path');
 
-//CREATE SERVER
+//W3SCHOOL
 const http = require('http') 
-const server = http.createServer()
+http.createServer(function (req, res) {
+  console.log(req.url)
+  if(req.url === "/") {
+    fs.readFile('index.html', function(err, data) {
+      res.writeHead(200, {'Content-Type': 'text/html'});
+      res.write(data);
+      return res.end();
+    });
+  } else if(req.url ==="/about") {
+    fs.readFile('about/index.html', function(err, data) {
+      res.writeHead(200, {'Content-Type': 'text/html'});
+      res.write(data);
+      return res.end();
+    });
+  }
+  
+}).listen(8080);
+
+//http://localhost:8080
 
 //CREATE RESPONSE
-server.on("request", (request, response) => {
-  console.log(request.url);
-  if(request.url === "/") {
-    console.log(path.join(__dirname, "index.html"));
-  } else if (request.url === "/about") {
-    console.log(path.join(__dirname, "about", "index.html"));
-  } else if (request.url === "/blog") {
-    console.log(path.join(__dirname, "blog", "index.html"));
-  } else if (request.url === "/contact") {
-    console.log(path.join(__dirname, "contact", "index.html"));
+/*server.on("request", (req, res) => {
+  console.log(req.url);
+  if(req.url === "/") {
+  console.log("This is the root");
+  } else if (req.url === "/about") {
+    console.log("This is the about folder");
+  } else if (req.url === "/blog") {
+    console.log("This is the blog folder");
+  } else if (req.url === "/contact") {
+    console.log("This is the contact folder");
   }
-  response.end();
-})
+  res.end();
+})*/
 
 //LISTEN TO SERVER RESPONSE
-server.listen(3000, () => {
+/*server.listen(3000, () => {
     console.log("Server started on http://127.0.0.1:3000");
-})
+})*/
