@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-//creating main html
+//DAY 1 - CREATING FILES AND FOLDERS
+//CREATE MAIN HTML
 try {
   const filePath = path.join(__dirname, "index.html");
   const h1Content = "<h1>This is the main index file</h1>";
@@ -24,7 +25,7 @@ try {
     console.error(err.message);
 }
 
-//create main css
+//CREATE MAIN CSS
 try {
     const filePath = path.join(__dirname, "style.css");
     const cssContent = `body {
@@ -37,7 +38,7 @@ try {
     console.error(err.message);
 }
 
-//create contact folder
+//CREATE CONTACT FOLDER
 try {
     fs.mkdirSync(path.join(__dirname, "contact"));
   
@@ -46,7 +47,7 @@ try {
     console.error(err.message);
   }
 
-//create about folder
+//CREATE ABOUT FOLDER
 try {
     fs.mkdirSync(path.join(__dirname, "about"));
   
@@ -55,7 +56,7 @@ try {
     console.error(err.message);
   }
 
-//create blog folder
+//CREATE BLOG FOLDER
 try {
     fs.mkdirSync(path.join(__dirname, "blog"));
   
@@ -65,10 +66,10 @@ try {
   }
 
 
-//creating about html
+//CREATE ABOUT-HTML
 try {
     const filePath = path.join(__dirname, "about", "index.html");
-    const h1Content = "<h1>This is the main index file</h1>";
+    const h1Content = "<h1>This is the about page html file</h1>";
     const cssLink = '<link rel="stylesheet" href="./about/style.css">';
   
     const htmlContent = `<!DOCTYPE html>
@@ -87,10 +88,10 @@ try {
     console.error(err.message);
 }
 
-//creating blog html
+//CREATE BLOG-HTML
 try {
   const filePath = path.join(__dirname, "blog", "index.html");
-  const h1Content = "<h1>H1 blog HTML</h1>";
+  const h1Content = "<h1>This is the blog page html file</h1>";
   const cssLink = '<link rel="stylesheet" href="./blog/style.css">';
 
   const htmlContent = `<!DOCTYPE html>
@@ -109,10 +110,10 @@ try {
     console.error(err.message);
 }
 
-//creating contact html
+//CREATE CONTACT-HTML
 try {
   const filePath = path.join(__dirname, "contact", "index.html");
-  const h1Content = "<h1>H1 blog HTML</h1>";
+  const h1Content = "<h1>This is the contact page html file</h1>";
   const cssLink = '<link rel="stylesheet" href="./contact/style.css">';
 
   const htmlContent = `<!DOCTYPE html>
@@ -131,7 +132,7 @@ try {
     console.error(err.message);
 }
 
-//creating about css
+//CREATE ABOUT-CSS
 try {
     const filePath = path.join(__dirname, "about", "style.css");    
     const cssContent = `body {
@@ -144,7 +145,7 @@ try {
     console.error(err.message);
 }
 
-//creating blog css
+//CREATE BLOG-CSS
 try {
     const filePath = path.join(__dirname, "blog", "style.css");
     const cssContent = `body {
@@ -157,7 +158,7 @@ try {
     console.error(err.message);
 }
 
-//creating contact css
+//CREATE CONTACT-CSS
 try {
     const filePath = path.join(__dirname, "contact", "style.css");
     const cssContent = `body {
