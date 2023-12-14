@@ -1,5 +1,3 @@
-//TODO: add a "info" page that explains how to use the API
-
 //IMPORT COLLECTION
 import dishes from './dishes.js';
 
@@ -7,21 +5,22 @@ import dishes from './dishes.js';
 import express from "express";
 const app = express();
 
-//TELL COMPUTER HOW TO HANDLE UPCOMING INFORMATION
+//TELL HOW TO HANDLE UPCOMING INFORMATION
 app.use(express.json());
 
-//SEND AN OK MESSAGE ON ROOT LEVEL
+//SEND OK MESSAGE ON ROOT LEVEL
 app.get("/", (req, res) => {
-    res.send({code: 200, msg:"OK"})
+    res.send("You're on the root level! Check the info page by adding /info/ to the URL!")
 })
 
-// //FETCH DATA FROM DISHES.JS
-app.get("/dishes", (req, res) => {
+//NAME THE DISHES
+app.get("/info", (req, res) => {
     const dishNames = dishes.map(dish => dish.name);
-    res.send("Heya, here you will find recipes for the following dishes: " + dishNames);
+    res.send("Remove /info/ and add the name of your chosen dish to the url to check its recipe: " + dishNames);
 })
 
-app.get("/dishes/:name", (req, res) => {
+//CREATE DYNAMIC ROUTE FOR DISHES
+app.get("/:name", (req, res) => {
     const dish = dishes.find(dish => dish.name.toLowerCase() === req.params.name.toLowerCase());
     if (dish) {
         res.send(dish);
@@ -41,7 +40,7 @@ app.listen(3000, () => {
 //     res.send(dish)
 // })
 
-//TARGET SPECIFIC VALUE FROM DISHES.JS
+//TARGET SPECIFIC PARAMETER FROM DISHES.JS
 // app.get("/dishes/:id", (req, res) => {
 //     const dish = dishes.find(dish => dish.id === parseInt(req.params.id))
 //     res.send(dish)
