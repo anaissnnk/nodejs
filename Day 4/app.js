@@ -13,7 +13,19 @@ app.get("/", (req, res) => {
     res.send({code: 200, msg:"OK"})
 })
 
-//FETCH DATA FROM DISHES.JS
+//CREATING NEW LIST TO PUSH WITH PREDETERMINED PARAMETERS
+app.post("/dishes/new", (req, res) => {
+    const newDish = {
+        name: req.body.name,
+        timeToPrepare: req.body.timeToPrepare,
+        ingredients: req.body.ingredients,
+        "list of steps": req.body.steps,
+    }
+    dishes.push(newDish);
+    res.status(200).send(dishes)
+})
+
+// //FETCH DATA FROM DISHES.JS
 app.get("/dishes", (req, res) => {
     res.send(dishes);
 })
