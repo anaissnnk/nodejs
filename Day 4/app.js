@@ -8,9 +8,9 @@ const app = express();
 //TELL HOW TO HANDLE UPCOMING INFORMATION
 app.use(express.json());
 
-//SEND OK MESSAGE ON ROOT LEVEL
+//SHOW EVERYTHING
 app.get("/", (req, res) => {
-    res.send("You're on the root level! Check the info page by adding /info/ to the URL!")
+    res.send(dishes)
 })
 
 //NAME THE DISHES
