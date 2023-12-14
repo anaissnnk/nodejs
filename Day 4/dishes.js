@@ -26,3 +26,5 @@ const dishes = [{
     ingredients: "Baguette, buffala, pesto, sundried tomatoes, pepper, garlic",
     "list of steps": "Bake your baguette in the oven. Cut in half, and cook in a pan and grate garlic. Afterwards, spread pesto, then cut your buffala and spread it on top. Add the sun-sdruned tomatoes and pepper.",
 }]
+
+export default dishes;
