@@ -1,5 +1,6 @@
 const dishes = [{
     //FIRST
+    id: 1,
     name: "Chocolate Lava Cake",
     timeToPrepare: "40 minutes",
     ingredients: "Dark Chocolate, Butter, Flour, Eggs, Sugar",
@@ -7,6 +8,7 @@ const dishes = [{
 },
 
 {   //SECOND
+    id: 2,
     name: "Matcha Fudgy Brownies",
     timeToPrepare: "30 minutes",
     ingredients: "Matcha, White Chocolate, Butter, Flour, Eggs, Brown Sugar",
@@ -14,6 +16,7 @@ const dishes = [{
 },
 
 {   //THIRD
+    id: 3,
     name: "Hojicha Latte",
     timeToPrepare: "10 minutes",
     ingredients: "Powdered Hojicha, Milk of your choice, Honey(optional)",
@@ -21,6 +24,7 @@ const dishes = [{
 },
 
 {   //FOURTH
+    id: 4,
     name: "Buffala and Pesto baguette",
     timeToPrepare: "30 minutes",
     ingredients: "Baguette, buffala, pesto, sundried tomatoes, pepper, garlic",

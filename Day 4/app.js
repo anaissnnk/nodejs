@@ -19,8 +19,9 @@ app.get("/dishes", (req, res) => {
 })
 
 //TARGET SPECIFIC VALUE FROM DISHES.JS
-app.get("/dishes/:ingredients", (req, res) => {
-    console.log(req.params.ingredients);
+app.get("/dishes/:id", (req, res) => {
+    const dish = dishes.find(dish => dish.id === parseInt(req.params.id))
+    res.send(dish)
 })
 
 //DEFINE PORT AND LISTEN
