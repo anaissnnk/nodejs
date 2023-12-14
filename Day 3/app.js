@@ -15,3 +15,5 @@ app.get('/Folder-1', (req, res) => {
 app.get('/Folder-2', (req, res) => {
     res.sendFile(path.join(__dirname, 'Folder-2', 'index2.html'));
 })
+
+//Solve .gitignore issue
