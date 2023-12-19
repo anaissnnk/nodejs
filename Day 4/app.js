@@ -4,12 +4,18 @@ import dishes from './dishes.js';
 //IMPORT EXPRESS MODULE AND DEFINE APP.JS AS MAIN APPLICATION
 import express from "express";
 const app = express();
+import { config } from "dotenv";
+config();
+import checkKey from './middleware.js';
+
+//ENV FILE
+console.log(process.env.API_KEY)
 
 //TELL HOW TO HANDLE UPCOMING INFORMATION
 app.use(express.json());
 
 //SHOW EVERYTHING
-app.get("/", (req, res) => {
+app.get("/", checkKey, (req, res) => {
     res.send(dishes)
 })
 
@@ -46,7 +52,7 @@ app.listen(3000, () => {
 //     res.send(dish)
 // })
 
-//APP.POST
+// //APP.POST
 // app.post("/dishes/chocolate-cake", (req, res) => {
 //     const newDish = {
 //         name: req.body.name,
@@ -65,7 +71,7 @@ app.listen(3000, () => {
 // })
 
 // //CREATING NEW LIST TO PUSH WITH PREDETERMINED PARAMETERS
-// app.post("/dishes/test6", (req, res) => {
+// app.post("/test6", (req, res) => {
 //     const newDish = {
 //         name: req.body.name,
 //         timeToPrepare: req.body.timeToPrepare,
